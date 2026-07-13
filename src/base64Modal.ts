@@ -7,7 +7,7 @@ export class Base64Modal extends Modal {
 		this.setTitle('Base64 converter');
 
 		let encoded = '';
-		let base64String = '';
+		let decodedString = '';
 		new Setting(this.contentEl).setName('Base64').addTextArea((text) => {
 			text.onChange((value) => {
 				encoded = value;
@@ -18,9 +18,13 @@ export class Base64Modal extends Modal {
 			btn.setButtonText('Convert');
 			btn.setCta();
 			btn.onClick(() => {
-				console.log(encoded);
-				base64String = Buffer.from(encoded, 'base64').toString('utf-8');
-				console.log(base64String);
+				decodedString = Buffer.from(encoded, 'base64').toString(
+					'utf-8',
+				);
+				console.log(decodedString);
+				this.contentEl.createEl('h1', {
+					text: decodedString,
+				});
 			});
 		});
 	}
