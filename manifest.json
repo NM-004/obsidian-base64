@@ -2,7 +2,7 @@
 	"id": "obsidian-base64",
 	"name": "obsidian base64",
 	"version": "1.0.0",
-	"minAppVersion": "1.0.0",
+	"minAppVersion": "1.1.0",
 	"description": "Plugin to convert Base64 to text and vise versa in obsidian Resources",
 	"author": "NM-004",
 	"authorUrl": "https://github.com/NM-004",
