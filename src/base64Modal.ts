@@ -8,11 +8,14 @@ export class Base64Modal extends Modal {
 
 		let norm_text = '';
 		let converted_string = '';
-		new Setting(this.contentEl).setName('Base64').addTextArea((text) => {
-			text.onChange((value) => {
-				norm_text = value;
+		new Setting(this.contentEl)
+			.setClass('b64')
+			.setName('Base64')
+			.addTextArea((text) => {
+				text.onChange((value) => {
+					norm_text = value;
+				});
 			});
-		});
 
 		new Setting(this.contentEl).addButton((btn) => {
 			btn.setButtonText('Convert to normal');
