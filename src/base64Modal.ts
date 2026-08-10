@@ -56,4 +56,9 @@ export class Base64Modal extends Modal {
 			this.resultDisplayEl.value = this.convertedValue;
 		}
 	}
+
+	onClose(): void {
+		const { contentEl } = this;
+		contentEl.empty();
+	}
 }
